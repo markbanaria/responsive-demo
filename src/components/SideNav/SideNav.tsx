@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useContext } from 'react';
+import Link from 'next/link';
 import SideNavLink from './SideNavLink';
 import NavContext from "@/components/NavProvider/nav-context";
 
@@ -16,17 +17,19 @@ const pages = [
 ];
 
 export default function SideNav({ children }: SideNavProps) {
-  const { isSideNavOpen, toggleSideNav } = useContext(NavContext);
+  const { isSideNavOpen, toggleSideNav, hideSideNav } = useContext(NavContext);
 
   const handleLinkClick = () => {
-    toggleSideNav();
+    hideSideNav();
   };
 
   return (
     <div className={`fixed top-0 left-0 z-50 min-h-screen bg-white border-r border-neutral-200 flex flex-col transition-all duration-300
       ${isSideNavOpen ? 'w-[240px]' : 'w-0'} 2xl:relative 2xl:w-[240px] 2xl:block overflow-hidden`}>
       <div className="p-6 font-bold pb-1 flex items-center justify-between">
-        <span>Responsive Demo</span>
+        <Link href="/">
+          <div className="cursor-pointer">Responsive Demo</div>
+        </Link>
         <span className="cursor-pointer 2xl:hidden" onClick={toggleSideNav}>✖️</span>
       </div>
       <div className="pl-6 pb-6 text-neutral-400">Mark Banaria</div>

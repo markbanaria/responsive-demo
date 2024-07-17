@@ -10,7 +10,8 @@ interface NavProviderProps {
 
 const NavContext = createContext({
   isSideNavOpen: false,
-  toggleSideNav: () => {}
+  toggleSideNav: () => {},
+  hideSideNav: () => {}
 });
 
 export const NavProvider = ({ children }: NavProviderProps ) => {
@@ -20,8 +21,12 @@ export const NavProvider = ({ children }: NavProviderProps ) => {
     setIsSideNavOpen(prevState => !prevState);
   };
 
+  const hideSideNav = () => {
+    setIsSideNavOpen(false);
+  };
+
   return (
-    <NavContext.Provider value={{ isSideNavOpen, toggleSideNav }}>
+    <NavContext.Provider value={{ isSideNavOpen, toggleSideNav, hideSideNav }}>
       {children}
     </NavContext.Provider>
   );
