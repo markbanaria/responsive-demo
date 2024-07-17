@@ -33,7 +33,7 @@ export default function Home() {
             </div>
             <div className="2xl:col-span-1 col-span-0"></div>
             <div className="2xl:col-span-7 col-span-12">
-              <div className="w-full 2xl:h-[532px] 2xl:mt-0 2xl:mb-0 mb-12 mt-8 h-[240px] col-span-12 bg-purple-100"></div>
+              <div className="w-full 2xl:h-[532px] 2xl:mt-0 2xl:mb-0 mb-12 mt-4 h-[240px] col-span-12 bg-purple-100"></div>
             </div>
           </div>
         </ResponsiveSection>
