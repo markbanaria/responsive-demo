@@ -2,7 +2,7 @@
 
 import { useContext } from 'react';
 import ResponsiveSection from "../ResponsiveSection/ResponsiveSection";
-import NavContext from "@/app/nav-context";
+import NavContext from "@/components/NavProvider/nav-context";
 
 interface TopNavProps {
   children: string;

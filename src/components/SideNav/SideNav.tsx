@@ -2,7 +2,7 @@
 
 import React, { useContext } from 'react';
 import SideNavLink from './SideNavLink';
-import NavContext from "@/app/nav-context";
+import NavContext from "@/components/NavProvider/nav-context";
 
 interface SideNavProps {
   children?: React.ReactNode;

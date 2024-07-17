@@ -3,6 +3,7 @@
 import { createContext, useState } from 'react';
 import React from 'react';
 
+
 interface NavProviderProps {
   children?: React.ReactNode;
 }
@@ -12,7 +13,7 @@ const NavContext = createContext({
   toggleSideNav: () => {}
 });
 
-export const NavProvider = ({ children }: NavProviderProps) => {
+export const NavProvider = ({ children }: NavProviderProps ) => {
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
 
   const toggleSideNav = () => {
